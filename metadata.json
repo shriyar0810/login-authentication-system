@@ -1,0 +1,6 @@
+{
+  "name": "Login Authentication System",
+  "description": "A modern, client-side authentication system with SHA-256 password hashing, session management, and protected dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

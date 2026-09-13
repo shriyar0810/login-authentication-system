@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Login Authentication System</title>
+  <meta name="description" content="A modern, client-side authentication system with SHA-256 password hashing, session management, and protected dashboard.">
+  <meta property="og:title" content="Login - Login Authentication System">
+  <meta property="og:description" content="A modern, client-side authentication system with SHA-256 password hashing, session management, and protected dashboard.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="login">
+
+  <main class="auth-wrapper" id="main-container">
+    <div class="auth-card" id="login-card">
+      
+      <!-- Card Header -->
+      <header class="auth-header" id="auth-header">
+        <h1 id="login-heading">Welcome Back 👋</h1>
+        <p id="login-subtitle">Sign in to continue to your dashboard.</p>
+      </header>
+
+      <!-- Alert / Notification Message Box -->
+      <div class="alert-box" id="login-alert" role="alert" aria-live="polite">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <span class="alert-message-text"></span>
+      </div>
+
+      <!-- Login Form -->
+      <form class="auth-form" id="login-form" novalidate>
+        
+        <!-- Username or Email Field -->
+        <div class="form-group" id="group-login-identifier">
+          <label class="form-label" for="login-identifier">Username or Email</label>
+          <div class="input-wrapper">
+            <input 
+              type="text" 
+              id="login-identifier" 
+              name="identifier" 
+              class="input-field" 
+              placeholder="Enter your username or email"
+              autocomplete="username"
+              required
+            >
+          </div>
+          <span class="field-error-message" id="error-login-identifier"></span>
+        </div>
+
+        <!-- Password Field with Visibility Toggle -->
+        <div class="form-group" id="group-login-password">
+          <label class="form-label" for="login-password">Password</label>
+          <div class="input-wrapper">
+            <input 
+              type="password" 
+              id="login-password" 
+              name="password" 
+              class="input-field input-with-action" 
+              placeholder="Enter your password"
+              autocomplete="current-password"
+              required
+            >
+            <button 
+              type="button" 
+              class="password-toggle-btn" 
+              id="toggle-login-password" 
+              aria-label="Show password"
+              title="Toggle password visibility"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <span class="field-error-message" id="error-login-password"></span>
+        </div>
+
+        <!-- Form Options: Remember Me Checkbox -->
+        <div class="form-options" id="login-form-options">
+          <label class="checkbox-label" for="remember-me">
+            <input type="checkbox" id="remember-me" name="rememberMe">
+            <span>Remember me</span>
+          </label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block" id="btn-login">
+          Sign In
+        </button>
+
+      </form>
+
+      <!-- Footer: Link to Register -->
+      <footer class="auth-footer" id="login-footer">
+        <p>Don't have an account? <a href="register.html" class="auth-link" id="link-to-register">Create one</a></p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
